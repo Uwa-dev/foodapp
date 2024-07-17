@@ -4,7 +4,7 @@ dotenv.config();
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.DATABASE, {
+        await mongoose.connect('mongodb://localhost:27017/JOB_APP', {
             // Adding this option to avoid deprecation warning
         });
         console.log(`Database connected`);
